@@ -1,0 +1,17 @@
+---
+
+- hosts: Ubuntu
+  gather_facts: no
+  vars_files:
+    - ./zan.yaml
+  roles:
+    - elastic
+    - grafana
+
+- hosts: Centos
+  roles:
+    - elastic2
+    - nagios2
+    - grafana2
+
+
